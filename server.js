@@ -6,6 +6,7 @@ const User = require('./models/User')
 const userRouter = require('./router/userRoutes')
 const catalogRouter = require('./router/catalog')
 const productRouter = require('./router/product')
+const assetRouter = require('./router/asset')
 
 
 
@@ -20,6 +21,10 @@ app.use(express.json())
 app.use(userRouter)
 app.use(catalogRouter)
 app.use(productRouter)
+app.use(assetRouter)
+
+
+
 
 
 app.listen(port, ()=>{

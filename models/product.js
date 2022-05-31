@@ -11,6 +11,9 @@ module.exports = (sequelize, DataTypes) => {
             autoGenrated:true,
             primaryKey:true
         },
+        userAddress: {
+            type: DataTypes.STRING,
+        },
        
     }, {
         freezeTableName: true,
@@ -20,7 +23,7 @@ module.exports = (sequelize, DataTypes) => {
     });
 
     Product.associate = function (models) {
-        Product.belongsTo(models.User, { foreignKey: { name: 'address', allowNull: true } });
+        Product.belongsTo(models.User, { foreignKey: { name: 'userAddress', allowNull: true } });
     }
     return Product;
 };

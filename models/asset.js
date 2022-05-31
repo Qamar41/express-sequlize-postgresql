@@ -15,16 +15,19 @@
             type: DataTypes.INTEGER,
             allowNull: false,
           },
-          address: {
+          userAddress: {
             type: DataTypes.STRING,
         }
     
-    }, {
+    },
+     {
         freezeTableName: true,
         timestamps: true,
         paranoid: true,
 
-    });
+    }
+    );
+    
     Asset.associate = function (models) {
         Asset.belongsTo(models.User, { foreignKey: { name: 'userAddress', allowNull: true } });
 

@@ -17,14 +17,25 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false,
       },
-      address: {
+      userAddress: {
         type: Sequelize.STRING,
         allowNull: false,
         references: {
           model: 'User',
           key: 'address',
         },
-      }
+        
+      },
+      createdAt: {
+        type: Sequelize.DATE,
+        defaultValue: Date.now(),
+      },
+      updatedAt: {
+        type: Sequelize.DATE,
+      },
+      deletedAt: {
+        type: Sequelize.DATE,
+      },
     });
   },
 

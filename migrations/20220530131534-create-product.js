@@ -10,6 +10,8 @@ module.exports = {
     id: {
         type: Sequelize.INTEGER,
         allowNull: false,
+        autoIncrement: true,
+      
     },
       createdAt: {
         type: Sequelize.DATE,
@@ -21,7 +23,15 @@ module.exports = {
       deletedAt: {
         type: Sequelize.DATE,
       },
-    });
+      userAddress: {
+        type: Sequelize.STRING,
+        allowNull: false,
+        references: {
+          model: 'User',
+          key: 'address',
+        },
+      },
+      });
   },
 
   down: async (queryInterface) => {

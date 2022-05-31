@@ -28,7 +28,7 @@ module.exports = (sequelize, DataTypes) => {
     });
     User.associate = function (models) {
         User.hasMany(models.Asset, { foreignKey: { name: 'userAddress', allowNull: true } });
-
+        User.hasMany(models.Product,{ foreignKey: { name: 'userAddress', allowNull: true }} )
     };
     return User;
 };
