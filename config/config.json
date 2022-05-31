@@ -1,0 +1,31 @@
+{
+    "development": {
+    "username": "postgres",
+        "password": "1234",
+        "database": "ass",
+        "host": "127.0.0.1",
+        "port": 5432,
+        "dialect": "postgres"
+},
+    "test": {
+    "username": "root",
+        "password": null,
+        "database": "database_test",
+        "host": "127.0.0.1",
+        "dialect": "postgres"
+},
+    "migration": {
+    "username": "bsasproductsdev",
+        "password": "OGQwNzRjZDFiYzYzNjdiNzgzZjBiNTgwYTZkN2FjO",
+        "database": "ProductServiceDB",
+        "host": "127.0.0.1",
+        "dialect": "postgres",
+        "port": "3308",
+        "dialectOptions": {
+        "connectTimeout": 120000
+    },
+    "seederStorage": "sequelize",
+        "seederStorageTableName": "SequelizeData",
+        "logging": true
+}
+}
