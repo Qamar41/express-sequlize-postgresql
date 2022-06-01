@@ -11,7 +11,7 @@ exports.buyProduct = async (req, res) => {
     const response = {}
     try {
         // get catalog
-        const catalog = await Catalog.findByPk(catalogId)
+        const catalog = await Catalog.findByPk(catalogId);
         if (!catalog) {
             response['message'] = 'catalog not found'
             return res.send(response).status(404);
